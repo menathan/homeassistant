@@ -1,0 +1,6 @@
+# logger
+
+default: warning
+logs:
+  homeassistant.components.mqtt: debug
+  homeassistant.components.slack: debug

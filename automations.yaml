@@ -1,0 +1,19 @@
+- alias: Post message to slack when I arrive at home.
+  trigger:
+    platform: state
+    entity_id: device_tracker.phone_phone
+    from: 'not_home'
+    to: 'home'
+  action:
+    service: notify.slack_notifier
+    data:
+      message: I arrived at home!
+
+- alias: The sun has set.
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: notify.slack_notifier
+    data:
+      message: The sun has set!

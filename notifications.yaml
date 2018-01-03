@@ -1,0 +1,8 @@
+- name: slack_notifier
+  platform: slack
+  api_key: !secret slack_api_key
+  default_channel: '#myassistant'
+
+- name: twilio_notifier
+  platform: twilio_sms
+  from_number: !secret twilio_from_number
